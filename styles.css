@@ -1,0 +1,215 @@
+html {
+  font-size: 16px;
+}
+@media (max-width: 24em) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 20em) {
+  html {
+    font-size: 14px;
+  }
+}
+html:not(.wf-active) .sans-serif {
+  font-family: Avenir Next, sans-serif;
+  letter-spacing: -0.05em;
+}
+html.wf-active .sans-serif {
+  font-family: canada-type-gibson, Avenir Next, sans-serif;
+}
+
+.serif {
+}
+
+.Header {
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.Nav > :first-child {
+  margin-right: auto;
+  margin-left: 0.66rem;
+}
+
+.Nav > * + * {
+  margin-right: 0.5rem;
+}
+
+.Nav > a {
+  color: inherit;
+  transition: background-color 0.1s;
+  text-decoration: none;
+  border: 2px solid currentColor;
+  padding: 0.5em 0.8em 0.45em;
+  border-radius: 100em;
+}
+
+.Nav > a:hover, .Nav > a:focus, .Nav > a:active {
+  background-color: white;
+}
+
+.Logo {
+  width: 5.5rem;
+  height: auto;
+}
+
+.Quote.-main {
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 3rem;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+.Quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  mix-blend-mode: multiply;
+}
+
+.Quote:nth-child(6n + 1)::before {
+  background-color: hsl(167, 70%, 60%);
+}
+
+.Quote:nth-child(6n + 2)::before {
+  background-color: hsl(185, 70%, 60%);
+}
+
+.Quote:nth-child(6n + 3)::before {
+  background-color: hsl(39, 75%, 75%);
+}
+
+.Quote:nth-child(6n + 4)::before {
+  background-color: hsl(333, 70%, 75%);
+}
+
+.Quote:nth-child(6n + 5)::before {
+  background-color: hsl(84, 70%, 75%);
+}
+
+.Quote:nth-child(6n + 6)::before {
+  background-color: hsl(270, 75%, 80%);
+}
+
+.Quote_Inner {
+  width: 100%;
+  max-width: 52rem;
+}
+
+.Quote_Short {
+  position: relative;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 3.25rem;
+  line-height: 1.1;
+}
+@media (max-width: 40em) {
+  .Quote_Short {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 30em) {
+  .Quote_Short {
+    font-size: 2rem;
+  }
+}
+/* Weirdly, this gets inherited as a pixel value not
+   recalculated at the higher font-size. */
+html:not(.wf-active) .Quote_Short {
+  letter-spacing: -0.05em;
+}
+
+.Quote_Short em {
+  transition: color 0.3s;
+  position: relative;
+  font-style: normal;
+  font-weight: 300;
+  font-variant: all-small-caps;
+  letter-spacing: 0.05em;
+  padding: 0 0 0 0.5rem;
+  margin-left: -2.4rem;
+  margin-right: -0.5rem;
+}
+html:not(.wf-active) .Quote_Short em {
+  font-family: Garamond, serif;
+  word-spacing: 0.1em;
+}
+html.wf-active .Quote_Short em {
+  font-family: freight-text-pro, Garamond, serif;
+}
+
+.Quote_Short em::before {
+  transition: opacity 0.3s;
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: white;
+  opacity: 0;
+}
+.Quote_Inner:hover em {
+  color: white;
+}
+.Quote_Inner:hover em::before {
+  opacity: 0.5;
+}
+
+.Quote_Short::first-line {
+  /*font-weight: 400;*/
+}
+
+.Quote_Attribution {
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.Quote_Attribution::before {
+  content: '—';
+  position: absolute;
+  right: calc(100% + 0.5rem);
+}
+
+.Quote_Work {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  opacity: 0.5;
+}
+
+.Quote_Links {
+  transition: opacity 0.1s;
+  opacity: 0;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding-top: 1rem;
+  display: inline-block;
+}
+
+.Quote_Links a {
+  color: black;
+  opacity: 0.5;
+  padding-right: 10px;
+}
+
+.Quote_Inner:hover .Quote_Links {
+  transition: opacity 0.3s 0.3s;
+  opacity: 1;
+}
