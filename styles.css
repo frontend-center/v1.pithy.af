@@ -14,9 +14,11 @@ html {
 html:not(.wf-active) .sans-serif {
   font-family: Avenir Next, sans-serif;
   letter-spacing: -0.05em;
+  font-weight: 500;
 }
 html.wf-active .sans-serif {
   font-family: canada-type-gibson, Avenir Next, sans-serif;
+  font-weight: 400;
 }
 
 .serif {
@@ -135,8 +137,9 @@ html:not(.wf-active) .Quote_Short {
   margin-left: -0.5em;
 }
 html:not(.wf-active) .Quote_Short em {
-  font-family: Garamond, serif;
+  font-family: Palatino, serif;
   word-spacing: 0.1em;
+  line-height: 1;
 }
 html.wf-active .Quote_Short em {
   font-family: freight-text-pro, Garamond, serif;
