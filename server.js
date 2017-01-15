@@ -7,7 +7,7 @@ app.use(serveStatic(__dirname, {
   setHeaders(res, path) {
     const mime = serveStatic.mime.lookup(path)
     let maxAge = mime === 'text/html' ? 0 : 600
-    res.setHeader('Cache-Control', `public, max-age=${maxAge}`)
+    res.setHeader('Cache-Control', `public, max-age=0, s-maxage=31536000`)
   }
 }))
 
